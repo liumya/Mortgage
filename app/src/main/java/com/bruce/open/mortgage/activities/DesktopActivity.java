@@ -72,6 +72,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
         viewPagerAdapter = new BaseFramentPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(viewPagerAdapter);
         desktopTabHost.setViewPager(viewPager);
+        //指定加载的页数，避免ViewPage内容改动后被重新加载，恢复原状态
         viewPager.setOffscreenPageLimit(fragmentList.size());
 
         desktopTabHost.setCurrentItem(0);
@@ -84,6 +85,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
         delayLayout = new FrameLayout(DesktopActivity.this);
         delayLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         delayLayout.setBackgroundResource(R.drawable.welcome_bg);
+        //getDecorView() 获取顶层view
         ((FrameLayout)getWindow().getDecorView()).addView(delayLayout);
     }
 
@@ -116,6 +118,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
 
     // 需要setContentView之前调用
     private void setTranslucentStatus() {
+        //当前SDK版本
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             // 透明状态栏
             getWindow().addFlags(
@@ -127,6 +130,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
             tintManager.setStatusBarTintEnabled(true);
             // 设置状态栏的颜色
             tintManager.setStatusBarTintResource(R.color.blue_light);
+            //
             getWindow().getDecorView().setFitsSystemWindows(true);
         }
     }
@@ -150,7 +154,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
                 public void run() {
                     delayLayout.setVisibility(View.GONE);
                 }
-            }, 1500);
+            }, 1000);
         }
     }
 

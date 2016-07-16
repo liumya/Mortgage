@@ -21,7 +21,7 @@ import com.bruce.open.mortgage.listeners.OnTabItemClickListener;
  * @author qizhenghao
  *         <p/>
  *         data: 2014年12月27日10:55:40
- * @description 基本Fragment，其他Fraagmen要继承
+ * @description 基本Fragment，其他Fragment要继承
  */
 
 public abstract class BaseFragment extends Fragment {

@@ -35,6 +35,9 @@ public class CustomTextView extends TextView {
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.bottom_line, 0, 0);
+        //public float getDimension(int index, float defValue)
+        //attrs.xml -> styles.xml定义了高度和宽度   bottomLineWidth
+        //??? bottom_line_bottom_line_width
         bottomLineWidth = array.getDimension(R.styleable.bottom_line_bottom_line_width, bottomLineWidth);
         bottomLineHeight = array.getDimension(R.styleable.bottom_line_bottom_line_height, bottomLineHeight);
         bottomLineColor = array.getColor(R.styleable.bottom_line_bottom_line_color, bottomLineColor);

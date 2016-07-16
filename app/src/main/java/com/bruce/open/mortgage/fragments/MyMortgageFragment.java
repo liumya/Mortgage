@@ -20,9 +20,7 @@ import com.bruce.open.mortgage.customViews.DesktopTabHost;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.text.DecimalFormat;
-import java.util.List;
 
 /**
  * Created by qizhenghao on 16/6/23.
@@ -46,8 +44,6 @@ public class MyMortgageFragment extends BaseFragment implements View.OnClickList
     private TextView monthTv;
     private TextView everyMonthPayTv;
     private MyMortgageListAdapter mAdapter;
-
-
 
     private Pair pair;
     private PayResult result;

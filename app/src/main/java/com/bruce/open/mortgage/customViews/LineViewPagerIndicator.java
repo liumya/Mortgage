@@ -53,31 +53,37 @@ public class LineViewPagerIndicator extends View implements ViewPagerIndicator {
 			mPaint.setAlpha(alpha);
 			invalidate();
 			if (alpha > 0) {
+				//alpha > 0 FADE_FRAME_MS = 30
 				postDelayed(this, FADE_FRAME_MS);
 			}
 		}
 	};
 
 	public LineViewPagerIndicator(Context context) {
+		//？？？
 		this(context, null);
 	}
 
 	public LineViewPagerIndicator(Context context, AttributeSet attrs) {
+		//
 		this(context, attrs, 0);
 	}
 
 	public LineViewPagerIndicator(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
+		// return
 		if (isInEditMode()) return;
 
 		final Resources res = getResources();
 
 		setFades(false);
 		setSelectedColor(res.getColor(R.color.blue_light));
+		//???
 		setFadeDelay(300);
 		setFadeLength(400);
 
 		final ViewConfiguration configuration = ViewConfiguration.get(context);
+		//
 		mTouchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(configuration);
 	}
 
