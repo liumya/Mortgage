@@ -51,13 +51,13 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
         setTranslucentStatus();
         setContentView(R.layout.activity_desktop_layout);
         initViews();
-//        setListener();
+        setListener();
         initData();
     }
 
-//    private void setListener() {
-//
-//    }
+    private void setListener() {
+
+    }
 
     private void initData() {
         isFromWelcome = getIntent().getBooleanExtra("is_from_welcome", true);
