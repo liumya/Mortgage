@@ -64,6 +64,7 @@ public class DesktopActivity extends AppCompatActivity implements View.OnClickLi
         mortgageCalculateFragment = new MortgageCalculateFragment();
         myMortgageFragment = new MyMortgageFragment();
         recommendFragment = new RecommendFragment();
+        //添加fragment
         fragmentList = new ArrayList<>();
         fragmentList.add(mortgageCalculateFragment);
         fragmentList.add(myMortgageFragment);
